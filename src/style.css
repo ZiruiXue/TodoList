@@ -1,0 +1,44 @@
+/* 需要引入css文件 */
+
+.inputstyle {
+    border: 3px solid red;
+}
+
+.mylabel {
+    color:#49bebe;
+}
+
+
+/* 当动画执行入场动画时，入场动画执行的第一个时刻，csstransition会往
+    标签上挂载fade-enter
+*/
+.fade-enter, .fade-appear {
+    opacity: 0;
+}
+
+/* 入场动画执行的第二个瞬间，fade-enter-active一直会执行到入场动画执行结束 */
+.fade-enter-active, .fade-appear-active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.fade-enter-done{
+    opacity: 1;
+}
+
+
+/*  出场动画 */
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-exit-done {
+    opacity: 0;
+}
+
+
