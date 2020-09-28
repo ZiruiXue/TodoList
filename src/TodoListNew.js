@@ -61,14 +61,8 @@ class TodoListNew extends Component {
     componentDidMount() {
         const action = getInitList();
         store.dispatch(action);
-        // axios.get('./list.json').then((res) => {
-        //     const data = res.data;
-        //     const action = initListAction(data);
-        //     store.dispatch(action);
-        // })
     }
-
-
+    
 
     handleStoreChange() {
         this.setState(store.getState());
